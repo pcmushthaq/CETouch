@@ -1,9 +1,16 @@
-import React from 'react';
-import SignUp from './containers/SignUp/signup';
-function App() {
-  return  (
-    <SignUp/>
-  );
+import React, { Component } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import SignUp from "./containers/SignUp/signup";
+class App extends Component {
+    render(){
+      return(
+        <BrowserRouter>
+      <Switch>
+        <Route path='/login' component={SignUp}/>
+      </Switch>
+    </BrowserRouter>
+      );
+    }
 }
 
 export default App;
