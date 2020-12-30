@@ -9,7 +9,7 @@ class SignUp extends Component {
   
   handleChange = (e) =>{
     this.setState({
-    [e.target.type]:e.target.value
+    [e.target.id]:e.target.value
     })
   }
   handleSubmit = (e) =>{
@@ -25,11 +25,11 @@ class SignUp extends Component {
             <Form onSubmit={this.handleSubmit}>
               <Form.Group id ="email">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" onChange={this.handleChange}/>
+                  <Form.Control id="email" type="email" onChange={this.handleChange}/>
               </Form.Group>
               <Form.Group id ="password">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" onChange={this.handleChange}/>
+                  <Form.Control id="password" type="password" onChange={this.handleChange}/>
               </Form.Group>
               <Button className="w-100" type="submit">Sign-Up</Button>
             </Form>
