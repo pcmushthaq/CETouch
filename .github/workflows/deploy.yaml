@@ -2,7 +2,7 @@ name: Firebase Deploy
 on:
   push:
     branches:
-      - Aswin-dev
+      - master
 jobs:
   build:
     name: Build
