@@ -1,16 +1,24 @@
-import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import SignUp from "./containers/SignUp/signup";
-class App extends Component {
-    render(){
-      return(
-        <BrowserRouter>
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Profile from "./components/profile";
+import Signup from "./containers/SignUp/signup";
+import PrivateRoute from "./routes/privateRoute";
+function App() {
+  return (
+    <div
+      style={{
+        textAlign: "center",
+      }}
+    >
       <Switch>
-        <Route path='/login' component={SignUp}/>
+        <PrivateRoute path="/profile">
+          <Profile />
+        </PrivateRoute>
+        <Route path="/">
+          <Signup />
+        </Route>
       </Switch>
-    </BrowserRouter>
-      );
-    }
+    </div>
+  );
 }
-
 export default App;
