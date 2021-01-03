@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { ReactReduxFirebaseProvider } from "react-redux-firebase";
@@ -51,3 +52,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+serviceWorkerRegistration.unregister();

@@ -5,7 +5,7 @@ import { Container, Button } from "react-bootstrap";
 
 const Profile = () => {
   const firebase = useFirebase();
-  const { displayName, photoURL } = useSelector((state) => state.firebase.auth);
+  const { displayName } = useSelector((state) => state.firebase.profile);
 
   const signOut = () => {
     firebase.logout();
@@ -13,7 +13,7 @@ const Profile = () => {
   return (
     <Container className="d-flex flex-column align-items-center justify-content-center">
       <h1>Hello {displayName}</h1>
-      <img src={photoURL} alt="Profile " />
+      <p>Welcome</p>
       <Button
         onClick={(event) => {
           event.preventDefault();
