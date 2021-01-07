@@ -17,7 +17,7 @@ const SignUp = () => {
       password: password,
       displayName: name,
     }).then(() => {
-      history.push("/profile");
+      history.push("/home");
     });
   };
 

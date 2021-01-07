@@ -1,17 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-import { createStore } from "redux";
+import { BrowserRouter as Router } from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { ReactReduxFirebaseProvider } from "react-redux-firebase";
+import { createStore } from "redux";
 import { createFirestoreInstance } from "redux-firestore";
-import { rootReducer } from "./reducers/reducer";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { rootReducer } from "./reducers/reducer";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB5JUPUbS003--RZ2N0HWPzIfWhm7UWto0",
@@ -44,9 +44,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
-        <BrowserRouter>
+        <Router>
           <App />
-        </BrowserRouter>
+        </Router>
       </ReactReduxFirebaseProvider>
     </Provider>
   </React.StrictMode>,

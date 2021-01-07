@@ -3,8 +3,11 @@ import { Button, Card, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useFirebase } from "react-redux-firebase";
 import { Link, useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { isLoaded } from "react-redux-firebase";
 
 const SignIn = () => {
+  const auth = useSelector((state) => state.firebase.auth);
   const firebase = useFirebase();
   const history = useHistory();
   const { register, handleSubmit } = useForm();
@@ -21,6 +24,7 @@ const SignIn = () => {
     <>
       <Card>
         <Card.Body>
+          {isLoaded(auth) ? <p></p> : <p>Loading</p>}
           <h2 className="text-center mb-4  ">Sign In</h2>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group id="email">
