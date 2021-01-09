@@ -13,6 +13,7 @@ import App from "./App";
 import { rootReducer } from "./reducers/reducer";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyB5JUPUbS003--RZ2N0HWPzIfWhm7UWto0",
   authDomain: "cetouchapp.firebaseapp.com",
