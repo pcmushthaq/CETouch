@@ -31,24 +31,24 @@ const Feed = () => {
   console.log(posts);
 
   return (
-    <div className="flex-wrapper">
+    <div className="flex-wrapper ctouch-feed">
       <p class="feed-main-head">Events and Updates</p>
       <ul className="feed-ul" style={{ listStyleType: "none" }}>
         {posts &&
           Object.values(posts).map((post) => (
             <li className="feed-list">
-              <h6 className="feed-head">
+              <h6 className="feed-head widget-title">
                 {post.title}
                 {post.title}
               </h6>
               <br></br>
-              <p>
-                <img
+              <img
                   alt={post.subtitle}
                   src={post.imageUrl}
                   className="rounded"
                 />
-                t ProperT Real Estate we know that service is not only about
+              <p className="content">
+                ProperT Real Estate we know that service is not only about
                 logistics and portfolios. It is a unique business that requires
                 in-depth and deep-rooted knowledge of{" "}
               </p>
