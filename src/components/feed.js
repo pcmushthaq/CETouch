@@ -39,7 +39,6 @@ const Feed = () => {
             <li className="feed-list">
               <h6 className="feed-head widget-title">
                 {post.title}
-                {post.title}
               </h6>
               <br></br>
               <img
