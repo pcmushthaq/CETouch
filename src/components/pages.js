@@ -1,5 +1,5 @@
 import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
+/*import CardHeader from "@material-ui/core/CardHeader";*/
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
@@ -46,8 +46,8 @@ const Pages = () => {
   }
   console.log(pages);
   return (
-    <div className="flex-wrapper">
-      <p> This is the pages page</p>
+    <div className="flex-wrapper ctouch-page">
+       <p class="feed-main-head">Follow Your Interests</p>
       <ul
         style={{
           listStyleType: "none",
@@ -57,9 +57,12 @@ const Pages = () => {
           Object.values(pages).map((page) => (
             <li key={page.name}>
               <Card className={classes.root}>
-                <CardHeader title={page.name} />
-
+            
+                
+              <h5>{page.name}</h5>
                 <img src={page.imageUrl} alt={page.name} />
+                
+                <a href="#e" class="follow">Follow</a>
               </Card>
             </li>
           ))}

@@ -15,6 +15,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Grid from "@material-ui/core/Grid";
 import Appbar from "./components/appbar";
 
+
 function App() {
   const auth = useSelector((state) => state.firebase.auth);
   if (!isLoaded(auth)) {

@@ -18,3 +18,167 @@ body {
 .bottomAppBar {
   bottom: 0;
 }
+
+/************** FEED PAGE ********************/
+
+.ctouch-feed {
+	overflow: hidden;
+}
+
+.feed-main-head {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 1em;
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.ctouch-feed .widget-title {
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+  padding-top:1em;
+  padding-bottom: 0;
+}
+
+.ctouch-feed ul {
+	display: inline-block;
+	margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  margin-bottom: 50%;
+}
+
+.ctouch-feed ul li {
+	float: left;
+  margin-right: 15px; 
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 1em;
+  width: 200px;
+}
+
+.ctouch-feed img {
+	height:160px;
+	vertical-align: top;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ctouch-feed .content{
+  margin-top: 10px;
+  text-align: justify;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .ctouch-feed ul {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding:0;
+  }
+  .ctouch-feed ul li {
+  width: 100%;
+  margin-top: 4em;
+  }
+  .feed-main-head {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .ctouch-feed img {
+    object-fit: cover;
+    width:100%; 
+    height: 300px;
+    
+  }
+}
+
+
+/************** PAGES PAGE ********************/
+
+
+
+.follow{
+  width:150px;
+  background-color:#0080ff;
+  color: white;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.follow:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.ctouch-page img {
+	height:160px;
+	vertical-align: top;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.ctouch-page ul li {
+	float: left;
+  margin-right: 15px; 
+  /*box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);*/
+  margin-top: 1em;
+  width: 200px;
+ 
+}
+
+.ctouch-page ul {
+	display: inline-block;
+	margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  margin-bottom: 50%;
+}
+
+.ctouch-page h5{
+ font-weight: bold;
+ font-size: 12px;
+ margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .ctouch-page img {
+    object-fit: cover;
+    width:200px; 
+    height: 200px;
+    border-radius: 50%;
+  }
+  .ctouch-page ul {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding:0;
+  }
+  .ctouch-page ul li {
+  width: 100%;
+  margin-top: 4em;
+  }
+  .ctouch-page h5{
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+   }
+   .follow{
+    width:200px;
+   }
+}
